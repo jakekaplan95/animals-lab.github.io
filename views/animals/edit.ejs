@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <main>=
+        <div>
+            <form action="/fruits/<%= fruit._id %>?_method=PUT" method="post">
+                <fieldset>
+                    <legend>Edit <%= animal.species %></legend>
+                    <label>Species: <input
+                        type="text"
+                        name="species"
+                        placeholder="enter species name"
+                        value="<%=animal.species %>"
+                        />
+                     </label>
+                     <label>
+                         Location:
+                         <input
+                         type="text"
+                         name="location"
+                         placeholder="where is this animal located?"
+                         value="<%=animal.location %>"
+                         />
+                     </label>
+                     <label>
+                         Extinct(?):
+                         <input
+                         type="checkbox"
+                         name="extinct"
+                         <%= animal.extinct ? "checked" : "" %>
+                         />
+                     </label>
+                     <label>Life Expectancy: <input
+                        type="number"
+                        name="lifeExpectancy"
+                        placeholder="what is the life expectancy?"
+                        value="<%=animal.lifeExpectancy %>"
+                        />
+
+                     <input type="submit" value="Make a new animal" />
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
